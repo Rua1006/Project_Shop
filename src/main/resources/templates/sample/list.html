@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>반다이몰</title>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+  <h1>데이터테스트</h1>
+    <table>
+      <thead>
+        <th>이름</th>
+        <th>전화번호</th>
+      </thead>
+      <tbody>
+        <tr th:each="sample : ${sampleList}">
+          <td th:text="${sample.name}"></td>
+          <td th:text="${sample.phone}"></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+</body>
+</html>
