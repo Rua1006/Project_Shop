@@ -14,7 +14,7 @@ public class SampleDAOImpl implements SampleDAO{
     SqlSession sqlSession;
 
     @Override
-    public List<SampleDTO> sampleList() throws Exception {
+    public List<SampleDTO> sampleList(){
         return sqlSession.selectList("sample.sampleList");
     }
 }

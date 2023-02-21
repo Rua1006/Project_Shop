@@ -4,9 +4,9 @@ import com.bandaimall.shop.dto.SampleDTO;
 import com.bandaimall.shop.service.SampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -18,9 +18,11 @@ public class SampleController {
     private SampleService sampleService;
 
     @GetMapping("list")
-    public String sampleList(Model model) throws Exception{
+    public ModelAndView sampleList() {
+        ModelAndView mv = new ModelAndView();
         List<SampleDTO> sampleList = sampleService.sampleList();
-        model.addAttribute("sampleList", sampleList);
-        return "/sample/list";
+        mv.setViewName("/sample/list");
+        mv.addObject("sampleList", sampleList);
+        return mv;
     }
 }

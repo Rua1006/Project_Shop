@@ -5,5 +5,5 @@ import com.bandaimall.shop.dto.SampleDTO;
 import java.util.List;
 
 public interface SampleService {
-    List<SampleDTO> sampleList() throws Exception;
+    List<SampleDTO> sampleList();
 }

@@ -14,7 +14,7 @@ public class SampleServiceImpl implements SampleService {
    SampleDAO sampleDAO;
 
     @Override
-    public List<SampleDTO> sampleList() throws Exception {
+    public List<SampleDTO> sampleList(){
         return sampleDAO.sampleList();
     }
 }
