@@ -15,5 +15,5 @@ server:
       force: true
 
 mybatis:
-  config: mybatis/mybatis-config.xml
   mapper-locations: mybatis/mappers/*.xml
+  type-aliases-package: com.bandaimall.shop.dto
